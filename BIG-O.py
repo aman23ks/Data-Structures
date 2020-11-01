@@ -90,3 +90,78 @@
 #     let whoAmI = "I don't know" #O(1)
 # O(4+5n) => O(n)
 # }
+
+# Bigo O
+# Rule 1:We always care about which is the worst case scenario.
+# Rule 2:Removing the constants.
+# Rule 3:Different terms for inputs.
+
+# O(n^2)
+# boxes = [1, 2, 3, 4, 5]
+# for i in boxes:
+#     for j in boxes:
+#         print(i, j)
+# for nested loops we use multiplication
+# which will make the above case O(n*n)
+# which is equal to O(n^2)
+# O(n^2) - Quadratic time , which means everytime the number of elements increase which means if we have 2 elements we have opeations that we do  if we have 3 elements we have 9 operations
+# Rule of thumb - anything that happens within the same indentation we add O(a+b).
+# Anything that happens within  a nested indentation we multiply O(n*n).
+
+
+# Rule 4:Drop Non Dominant terms
+# def myfunc(myList):
+#     print("these are the numbers")
+#     for i in myList:
+#         print(i)
+#     print("\n")
+#     for i in myList:
+#         for j in myList:
+#             print(i+j)
+
+
+# thisList = [1, 2, 3, 4, 5]
+# myfunc(thisList)
+# Time complexity in the above case is O(n + n^2) , but as the 4th rule states drop the non-dominant term , so we drop O(n).
+# therefore the time complexity is O(n^2)
+
+# bigOcheatsheet.com
+
+# O(n!) - Most expensive called factorial time , it means we are adding  a nested loop for every element we add. Most probably never see.
+
+# 3 Pillars of Code
+# 1. Readable - Write readable clean code that others can read.
+# 2. Speed (Time Complexity) - a code has a BigO time complexity which is efficient.
+# 3.Memory(Space Complexity) - the amount of space required should be efficient.
+# Most programming code solutions there is a tradeoff between time and space if you want something to go faster you require more memory but if you require less space it'll require more time.
+
+# When a code executes it has two ways to store memory one is thorugh heap and the other is through stack .
+# the heap basically stores our variables , and the stack is where we keep track of our function calls
+# What causes space complexity?-
+# Variables
+# Data Structures
+# Function Call
+# Allocations
+
+# eg:
+# def myfunc(boo):
+#     for i in boo:
+#         print("booo!")
+
+
+# booo = [1, 2, 3, 4, 5]
+# myfunc(booo)
+# in the above case we only have one variable i which is getting initalized so the space complexity is O(1)
+
+
+# eg:
+# def myfunc(n):
+#     thisList = []
+#     for i in range(n):
+#         thisList.append("h1")
+
+#     return thisList
+
+
+# print(myfunc(6))
+# in the above case we have a list and we are adding n elements(n being specified by user) the amount of time it'll loop thorugh to add elements the list is n so the space complexity is O(n)
