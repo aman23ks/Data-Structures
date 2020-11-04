@@ -13,10 +13,11 @@ def reverse(arr):
     # if only return reversedArray ['n', 'a', 'm', 'A', ' ', 's', 'i', ' ', 'e', 'm', 'a', 'n', ' ', 'y', 'M', ' ', 'i', 'H']
     # to remove the '' we do the join function
     return ''.join(reversedArray)
+    # The time complexity is O(n)
 
 
 print(reverse(array))
 
 
 # or simply just do
-# print(array[::-1])
+# print(array[::-1]) # In this case the time complexity is O(1)
