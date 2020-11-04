@@ -28,6 +28,8 @@ array.pop(3)
 # This method finds the method you want to remove and deletes it and shifts all the elements ahead of it one step backwards.
 array.remove('d')
 # It has a time complexity of O(n).
+# this method removes all the elements from position 1 to 3 and shifts all the elements ahead one step back
 del array[1:3]
+# It has a time complexity of O(n)
 
 print(array)
