@@ -1,2 +1,2 @@
 # hash table implementation
-# Hash
+# Hash table
