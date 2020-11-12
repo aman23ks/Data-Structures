@@ -42,6 +42,34 @@ class hash_table():
                     return currentBucket[i][1]
         return None  # If we don't find the key, we return None
 
+    def keys(self):  # Function to return all the keys
+        keysArray = []  # Array to hold the keys
+        for i in range(self.size):  # We loop over the entire table
+            if self.data[i]:  # If we find a non-empty bucket, we go in and loop over all the key,value pairs that might be in it
+                # If the number of elements inside the bucket is more than 1 .
+                if len(self.data[i]) > 1:
+                    # Looping over all the lists(key,value pairs) in the current bucket
+                    for j in range(self.data[i]):
+                        # Adding the key of each list to the keys_array
+                        keysArray.append(self.data[i][j][0])
+            else:
+                keysArray.append(self.data[i][0][0])
+        return keysArray
+
+    def values(self):  # Function to return all the keys
+        valuesArrays = []  # Array to hold the keys
+        for i in range(self.size):  # We loop over the entire table
+            if self.data[i]:  # If we find a non-empty bucket, we go in and loop over all the key,value pairs that might be in it
+                # If the number of elements inside the bucket is more than 1 .
+                if len(self.data[i]) > 1:
+                    # Looping over all the lists(key,value pairs) in the current bucket
+                    for j in range(self.data[i]):
+                        # Adding the key of each list to the keys_array
+                        valuesArrays.append(self.data[i][j][1])
+            else:
+                valuesArrays.append(self.data[i][0][1])
+        return valuesArrays
+
 
 new_hash = hash_table(2)
 # print(new_hash)
@@ -50,4 +78,6 @@ new_hash.set("grapes", 1000)
 
 new_hash.set("apples", 50)
 
-new_hash.get("apples")
+# new_hash.get("apples")
+
+new_hash.values()
