@@ -151,13 +151,13 @@ class LinkedList():
             self.length -= 1
 
 
-myLinkedList = LinkedList()
-myLinkedList.append(5)
-myLinkedList.append(8)
-myLinkedList.append(10)
-myLinkedList.append(99)
-myLinkedList.append(20)
-myLinkedList.insert(3, 30)
-myLinkedList.remove(5)
-myLinkedList.remove(3)
-print(myLinkedList)
+# myLinkedList = LinkedList()
+# myLinkedList.append(5)
+# myLinkedList.append(8)
+# myLinkedList.append(10)
+# myLinkedList.append(99)
+# myLinkedList.append(20)
+# myLinkedList.insert(3, 30)
+# myLinkedList.remove(5)
+# myLinkedList.remove(3)
+# print(myLinkedList)
