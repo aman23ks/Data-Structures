@@ -87,25 +87,28 @@ my_queue.enqueue("This")
 my_queue.enqueue("is")
 my_queue.enqueue("a")
 my_queue.enqueue("Queue")
-# my_queue.print_queue()
-# # This  <<--  is  <<--  a  <<--  Queue
+my_queue.print_queue()
+# This  <<--  is  <<--  a  <<--  Queue
 
-# print(my_queue.peek())
-# # This
+print(my_queue.peek())
+# This
 
-# my_queue.dequeue()
-# my_queue.dequeue()
-# my_queue.print_queue()
-# #a  <<--  Queue
+my_queue.dequeue()
+my_queue.dequeue()
+my_queue.print_queue()
+#a  <<--  Queue
 
-# print(my_queue.__dict__)
-# # {'first': <__main__.Node object at 0x0000020CE99AED48>, 'last': <__main__.Node object at 0x0000020CE99AED88>, 'length': 2}
-# print(my_queue.first)
-# # <__main__.Node object at 0x000001A3F633ED48>
-# print(my_queue.first.data)
-# # a
+print(my_queue.__dict__)
+# {'first': <__main__.Node object at 0x0000020CE99AED48>, 'last': <__main__.Node object at 0x0000020CE99AED88>, 'length': 2}
+print(my_queue.first)
+# <__main__.Node object at 0x000001A3F633ED48>
+print(my_queue.first.data)
+# a
 
-# my_queue.dequeue()
-# my_queue.dequeue()
-# my_queue.print_queue()
-# # Queue Empty
+my_queue.dequeue()
+my_queue.dequeue()
+my_queue.print_queue()
+# Queue Empty
+
+
+# Implementation of Queues using stacks done on leetcode question number 232
