@@ -14,9 +14,10 @@ class Node():
         self.right = None
         self.value = value
 
-
 # Now we will implement the Binary Search Tree having a constructor with the root node initialised to None
 # And the three methods, lookup, insert and delete
+
+
 class BinarySearchTree():
     def __init__(self):
         self.root = None
@@ -57,10 +58,10 @@ class BinarySearchTree():
                         self.number_of_nodes += 1
                         return self
             return
-
 # Now we will implement the lookup method.
 # It will follow similar logic as to the insert method to reach the correct position.
 # Only instead of inserting a new node we will return "Found" if the node pointed by the temporary node contains the same value we are looking for
+
     def lookup(self, value):
         if self.root == None:
             return "Tree is Empty"
@@ -80,8 +81,9 @@ class BinarySearchTree():
 
     # def remove(self, value):
 
-# myBinarySearchTree = BinarySearchTree()
-# myBinarySearchTree.insert(9)
-# myBinarySearchTree.insert(20)
-# myBinarySearchTree.insert(8)
-# print(myBinarySearchTree)
+
+myBinarySearchTree = BinarySearchTree()
+myBinarySearchTree.insert(9)
+myBinarySearchTree.insert(20)
+myBinarySearchTree.insert(8)
+print(myBinarySearchTree)
