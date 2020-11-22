@@ -9,7 +9,7 @@ def fibonacciRecurssive(number):  # O(2^n) - time complexity more worse than O(n
         return fibonacciRecurssive(number-1) + fibonacciRecurssive(number-2)
 
 
-print(fibonacciRecurssive(8))
+print(fibonacciRecurssive(10))
 
 
 def fibonacciIterative(number):  # O(n) - time complexity
@@ -25,4 +25,4 @@ def fibonacciIterative(number):  # O(n) - time complexity
         return array[len(array)-1]
 
 
-print(fibonacciIterative(8))
+print(fibonacciIterative(10))
