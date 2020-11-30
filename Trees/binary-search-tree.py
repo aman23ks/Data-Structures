@@ -78,9 +78,78 @@ class BinarySearchTree:
             print(str(curr_node.data))
             self.printt(curr_node.right)
 
+# Now we implement the BFS method.
+    def BFS(self):
+        current_node = self.root  # We start with the root node
+        BFS_result = []  # This will store the result of the BFS
+        queue = []  # Queue to keep track of the children of each node
+        queue.append(current_node)  # We add the root to the queue first
+        while len(queue) > 0:
+            # We extract the first element of the queue and make it the current node
+            current_node = queue.pop(0)
+            # We push the data of the current node to the result list as we are currently visiting the current node
+            BFS_result.append(current_node.data)
+            if current_node.left:  # If left child of the current node exists, we append it to the queue
+                queue.append(current_node.left)
+            if current_node.right:  # Similarly, if right child exists, we append it to the queue
+                queue.append(current_node.right)
+        return BFS_result
+
+    def BFSRecursive(self, queue, BFS_list):
+        if len(queue) == 0:
+            return BFS_list
+        else:
+            current_node = queue.pop(0)
+            BFS_list.append(current_node.data)
+            if current_node.left:
+                queue.append(current_node.left)
+            if current_node.right:
+                queue.append(current_node.right)
+            return self.BFSRecursive(queue, BFS_list)
+
+# Now we'll implementthe three kinds of DFS Traversals.
+
+    def DFS_Inorder(self):
+        return inorder_traversal(self.root, [])
+
+    def DFS_Preorder(self):
+        return preorder_traversal(self.root, [])
+
+    def DFS_Postorder(self):
+        return postorder_traversal(self.root, [])
+
+
+def inorder_traversal(node, DFS_list):
+    if node.left:
+        inorder_traversal(node.left, DFS_list)
+    DFS_list.append(node.data)
+    if node.right:
+        inorder_traversal(node.right, DFS_list)
+    return DFS_list
+
+
+def preorder_traversal(node, DFS_list):
+    DFS_list.append(node.data)
+    if node.left:
+        preorder_traversal(node.left, DFS_list)
+    if node.right:
+        preorder_traversal(node.right, DFS_list)
+    return DFS_list
+
+
+def postorder_traversal(node, DFS_list):
+    if node.left:
+        preorder_traversal(node.left, DFS_list)
+    if node.right:
+        preorder_traversal(node.right, DFS_list)
+    DFS_list.append(node.data)
+    return DFS_list
+
+# Inorder - LNR
+# Preorder - NLR
+
 
 # Remove element from binary search tree do it while doing recursion
-
 bst = BinarySearchTree()
 bst.insert(10)
 bst.insert(5)
@@ -93,3 +162,8 @@ print(x)
 y = bst.lookup(99)
 print(y)
 bst.print_tree()
+print(bst.BFS())
+print(bst.BFSRecursive([bst.root], []))
+print(bst.DFS_Inorder())
+print(bst.DFS_Preorder())
+print(bst.DFS_Postorder())
