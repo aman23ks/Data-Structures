@@ -67,18 +67,9 @@ class BinarySearchTree:
             else:
                 curr_node = curr_node.right
 
-    def print_tree(self):
-        if self.root != None:
-            self.printt(self.root)
-# Inorder Traversal (We get sorted order of elements in tree)
-
-    def printt(self, curr_node):
-        if curr_node != None:
-            self.printt(curr_node.left)
-            print(str(curr_node.data))
-            self.printt(curr_node.right)
 
 # Now we implement the BFS method.
+
     def BFS(self):
         current_node = self.root  # We start with the root node
         BFS_result = []  # This will store the result of the BFS
@@ -145,8 +136,24 @@ def postorder_traversal(node, DFS_list):
     DFS_list.append(node.data)
     return DFS_list
 
+# # def print_tree(self):
+#     #     if self.root != None:
+#     #         self.printt(self.root)
+# # Inorder Traversal (We get sorted order of elements in tree)
+
+
+# def printt(self, curr_node, list):
+#     if curr_node != self.root:
+#         if curr_node.left:
+#             printt(curr_node, list)
+#         list.append(curr_node.data)
+#         if curr_node.right:
+#             printt(curr_node, list)
+
+
 # Inorder - LNR
 # Preorder - NLR
+# Postorder - LRN
 
 
 # Remove element from binary search tree do it while doing recursion
@@ -161,7 +168,7 @@ x = bst.lookup(6)
 print(x)
 y = bst.lookup(99)
 print(y)
-bst.print_tree()
+# bst.printt([bst.root], [])
 print(bst.BFS())
 print(bst.BFSRecursive([bst.root], []))
 print(bst.DFS_Inorder())
