@@ -31,3 +31,5 @@ def twoSum():
 
 
 print(twoSum())
+
+# Time Complexity is O(n).
