@@ -70,6 +70,7 @@ class BinarySearchTree:
 
 # Now we implement the BFS method.
 
+
     def BFS(self):
         current_node = self.root  # We start with the root node
         BFS_result = []  # This will store the result of the BFS
@@ -117,6 +118,8 @@ def inorder_traversal(node, DFS_list):
     if node.right:
         inorder_traversal(node.right, DFS_list)
     return DFS_list
+
+# check alternate method for recursion and iteration
 
 
 def preorder_traversal(node, DFS_list):
