@@ -40,4 +40,4 @@ while left < right:
     else:
         right = mid
 
-# print(left)
+print(left)
