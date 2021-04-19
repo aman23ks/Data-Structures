@@ -12,13 +12,12 @@ N = 4
 for row in range(len(Mat)):
     values.extend(Mat[row])
 values = sorted(values)
-# print(values)
-for i in range(N*N):
-    for j in range(N):
-        if j == (N-1):
-            break
-        new_row_list.append(values[i])
+print(values)
+
+for i in range(N*N):  # 16
+    for j in range(N):  # 4
+        print(values[j])
+        new_row_list.append(values.pop(j))
     new_mat.append(new_row_list)
-    new_row_list = []
 
 print(new_mat)
