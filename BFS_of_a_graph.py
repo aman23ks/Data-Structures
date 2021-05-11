@@ -28,3 +28,16 @@ graph.add_edge(0, 2)
 graph.add_edge(0, 3)
 graph.add_edge(2, 4)
 print(graph)
+
+queue = [list(graph.adjancency_list.keys())[0]]
+# print(list(graph.adjancency_list.keys())[0])
+BFS_list = []
+
+while queue:
+    val = queue.pop(0)
+    BFS_list.append(val)
+
+    if graph.adjancency_list[val]:
+        for i in graph.adjancency_list[val]:
+            queue.append(i)
+print(BFS_list)
