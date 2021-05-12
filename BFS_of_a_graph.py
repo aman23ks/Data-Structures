@@ -30,7 +30,7 @@ graph.add_edge(2, 4)
 print(graph)
 
 queue = [list(graph.adjancency_list.keys())[0]]
-# print(list(graph.adjancency_list.keys())[0])
+# list(graph.adjancency_list.keys())[0] - done for getting forst element in the adjancency list
 BFS_list = []
 
 while queue:
