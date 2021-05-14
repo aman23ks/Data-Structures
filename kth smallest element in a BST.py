@@ -14,5 +14,6 @@ def kthSmallest(self, root, k):
 
         inorder(root.right)
 
-    inorder(root)
-    return self.k_smallest
+
+inorder(root)
+print(self.k_smallest)
