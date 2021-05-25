@@ -1,4 +1,4 @@
-from typing import DefaultDict, List
+from typing import DefaultDict
 
 
 n = 4

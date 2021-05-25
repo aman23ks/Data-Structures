@@ -6,10 +6,8 @@ def subArrayExists(arr):
         return True
 
     for i in arr:
-        print(-i)
         if i > 0:
             if -i in arr:
-
                 return True
         if i < 0:
             if i in arr:
