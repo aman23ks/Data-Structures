@@ -12,7 +12,8 @@ def DFS(adj, visited, curr_vector, count):
     curr_list = adj[curr_vector]
     for i in curr_list:
         if visited[i] == False:
-            DFS(adj, visited, i, count)
+            count = DFS(adj, visited, i, count)
+    return count
 
 
 def journeyToMoon(n, astronaut):
@@ -28,10 +29,10 @@ def journeyToMoon(n, astronaut):
         adj[astronaut[i][1]].append(astronaut[i][0])
 
     for i in range(n):
+        count = 0
         if visited[i] == False:
-            count = 0
-            DFS(adj, visited, i, count)
-            solution.append(count)
+            value = DFS(adj, visited, i, count)
+            solution.append(value)
 
     val = (n*(n-1))/2
 

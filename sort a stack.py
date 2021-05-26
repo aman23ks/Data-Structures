@@ -1,34 +1,28 @@
 def sort_stack(s):
     if s == []:
-        return 0
+        return []
 
     temp = s[-1]
     s = s[:-1]
-    sort_stack(s)
+    s = sort_stack(s)
 
-    put_sorted(s, temp)
+    s = put_sorted(s, temp)
 
     return s
 
 
 def put_sorted(s, temp):
 
-    # print(s)
     if s == [] or temp < s[-1]:
         s.append(temp)
-        print(s)
-        return 0
+        return s
 
     val = s[-1]
-    print(val)
 
     s = s[:-1]
-    print(s)
-    put_sorted(s, temp)
-    print(s)
+    s = put_sorted(s, temp)
     s.append(val)
-    print(s)
-    return 0
+    return s
 
 
 print(sort_stack([11, 2, 32, 3, 41]))

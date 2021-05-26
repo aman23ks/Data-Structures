@@ -1,35 +1,28 @@
-s = [1, 2, 3, 4]
-
-
-def sort(s):
+def sort_stack(s):
     if s == []:
-        return
+        return []
 
-    val = s[-1]
+    temp = s[-1]
     s = s[:-1]
+    s = sort_stack(s)
 
-    sort(s)
-
-    add_to_stack(s, val)
+    s = put_sorted(s, temp)
 
     return s
 
 
-def add_to_stack(s1, val):
+def put_sorted(s, temp):
 
-    if s1 == []:
-        s1.append(val)
-        return
+    if s == []:
+        s.append(temp)
+        return s
 
-    temp = s1[-1]
+    val = s[-1]
 
-    s1 = s1[:-1]
-
-    add_to_stack(s1, val)
-
-    s1.append(temp)
-
-    return
+    s = s[:-1]
+    s = put_sorted(s, temp)
+    s.append(val)
+    return s
 
 
-print(sort(s))
+print(sort_stack([11, 2, 32, 3, 41]))
