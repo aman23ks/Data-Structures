@@ -1,7 +1,5 @@
 q = [4, 3, 1, 10, 2, 6]
 
-# add code here
-
 
 def reverse(q):
 
@@ -10,20 +8,17 @@ def reverse(q):
 
     val = q.pop(0)
 
-    q = q[1:]
+    if q != []:
+        q = reverse(q)
 
-    reverse(q)
-
-    put_rev(q, val)
+    q = put_rev(q, val)
 
     return q
 
 
 def put_rev(q, val):
-
-    if q == []:
-        q.append(val)
-    return
+    q.append(val)
+    return q
 
 
 print(reverse(q))
