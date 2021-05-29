@@ -1,4 +1,3 @@
-
 class Node:
     def __init__(self, data):   # data -> value stored in node
         self.data = data
@@ -43,5 +42,4 @@ def addOne(head):
         if l1.next == None and carry == 1:
             l1.next = Node(0)
             l1 = l1.next
-
-    return reverse(head)
+    return reverse(l1)
