@@ -1,3 +1,4 @@
+# https://youtu.be/hkyzcLkmoBY  for better understanding
 class MinHeap:
     def __init__(self, capacity):
         self.storage = [0] * capacity
