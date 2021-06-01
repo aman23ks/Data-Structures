@@ -12,9 +12,7 @@ def reverse(self, nums, beg, end):
 
 
 def nextPermutation(self, nums):
-    """
-    Do not return anything, modify nums in-place instead.
-    """
+
     if len(nums) == 1:
         return
     if len(nums) == 2:
