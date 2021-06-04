@@ -32,6 +32,3 @@ for i in range(len(q)):
 # Alternately remove elements from stack and queue
 
 print(q2)
-
-# print(q)
-# print(stack)
