@@ -5,7 +5,6 @@ class Node:
 
 
 def findIntersection(head1, head2):
-    # return head
     l1 = head1
     l2 = head2
     head = Node(None)
