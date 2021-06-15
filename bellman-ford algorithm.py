@@ -53,7 +53,6 @@ def BellmanFord(graph, edge_list):
     for i in edge_list:
         edges_list.append([i, edge_list[i]])
 
-    print(edges_list)
     for i in range(len(graph)-1):
         updated = False
         for j in range(len(edges_list)):
@@ -68,7 +67,14 @@ def BellmanFord(graph, edge_list):
                 if updated == False:
                     break
 
-    return value
+    for i in range(len(edges_list)):
+        U = edges_list[j][0][0]
+        V = edges_list[j][0][1]
+        wt = edges_list[j][1]
+        if value[U-1] != float("inf") and value[U-1] + wt < value[V-1]:
+            return "Negative cycle present"
+
+        return "Not present"
 
 
 print(BellmanFord(graph.adjancency_list, graph.weight))
