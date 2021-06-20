@@ -32,20 +32,20 @@ values = sorted(values)
 #         continue
 #     else:
 #         check(i, values)
-
+print(values)
 i = 0
 while i < len(nums)-1:
     if values[i][1] == i:
         # print(values[i])
+        i += 1
         continue
     else:
         count += 1
         var = values[i][1]
+        print(var)
         temp = values[i]
         values[i] = values[var]
         values[var] = temp
-
-        i += 1
 
 
 print(values)
