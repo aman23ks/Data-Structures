@@ -1,3 +1,4 @@
+# If in this question you don't need to change the array then create a new array and make changes in that.
 count = 0
 
 
