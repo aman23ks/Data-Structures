@@ -9,7 +9,7 @@ def sumOfLongRootToLeafPath(root):
 
         if left[0] > right[0]:
             return [left[0]+1, left[1]+root.data]
-        if left[0] < right[0]:
+        elif left[0] < right[0]:
             return [right[0]+1, right[1]+root.data]
         else:
             return [left[0]+1, max(left[1], right[1]) + root.data]
