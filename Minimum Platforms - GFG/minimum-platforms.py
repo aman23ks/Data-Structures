@@ -10,7 +10,6 @@ class Solution:
         dep.sort()
         
         plt = 1
-        
         mx = 1
         
         i = 0
@@ -22,11 +21,11 @@ class Solution:
                 mx = max(mx, plt)
                 j += 1
             else:
-                i += 1
+                i+=1
                 plt -= 1
         
         return mx
-                 
+        
 #{ 
  # Driver Code Starts
 #Initial Template for Python 3
