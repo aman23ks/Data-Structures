@@ -14,7 +14,6 @@ class Solution:
             maxi = max(maxi, Jobs[i].deadline)
         
         result = [-1 for i in range(maxi)]
-            
         
         total = 0
         jobs_done = 0
@@ -23,7 +22,6 @@ class Solution:
             arr.append([Jobs[i].profit,Jobs[i].deadline])
         
         arr.sort(reverse=True)
-        
         
         for i in range(n):
             for j in range(arr[i][1]-1,-1,-1):
@@ -34,6 +32,36 @@ class Solution:
                     break
         
         return [jobs_done, total]
+
+
+        
+        
+        
+   
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
                 
                 
 #{ 
