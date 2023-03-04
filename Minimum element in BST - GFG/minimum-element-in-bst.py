@@ -6,7 +6,7 @@ def minValue(root):
     ##Your code here
     if not root:
         return -1
-        
+    
     while root.left != None:
         root = root.left
     
