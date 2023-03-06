@@ -5,16 +5,15 @@ class Solution:
         # Code here
         floor = -1
         while root != None:
-            if root.data > x:
-                root = root.left
-            elif root.data < x:
-                floor = root.data
+            if root.data < x:
+                floor = root.data #9
                 root = root.right
+            elif root.data > x:
+                root = root.left
             else:
                 return root.data
         
         return floor
-
 #{ 
  # Driver Code Starts
 #Initial Template for Python 3
