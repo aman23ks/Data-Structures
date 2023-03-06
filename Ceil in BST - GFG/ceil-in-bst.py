@@ -4,32 +4,19 @@ class Solution:
     def findCeil(self,root, inp):
         # code here
         ceil = -1
+        
         while root != None:
             if root.key > inp:
-                ceil = root.key
+                ceil = root.key #3
                 root = root.left
             elif root.key < inp:
                 root = root.right
-                # ceil = root.right.key
             else:
                 return root.key
-        
-        return ceil
-                
-        # def recur(root, inp):
-        #     if not root:
-        #         return None
-                
-        #     if root.key == inp:
-        #             return root.key.data
             
-        #     if root.key > inp:
-        #         root = (root.left, inp)
-        #     else:
-        #         root = recur(root.right, inp)
+        return ceil
         
-        # return recur(root,inp)
-                    
+    
     
 #{ 
  # Driver Code Starts
