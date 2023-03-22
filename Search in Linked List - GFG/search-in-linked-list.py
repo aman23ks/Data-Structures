@@ -15,7 +15,7 @@ class Solution:
                 return 1
             else:
                 head = head.next
-            
+        
         return 0
 #{ 
  # Driver Code Starts
