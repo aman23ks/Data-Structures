@@ -15,9 +15,9 @@ class Solution:
         #code here
         count = 0
         while head_node:
-            count +=1
             head_node = head_node.next
-        
+            count += 1
+            
         return count
 
 #{ 
