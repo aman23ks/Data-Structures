@@ -24,7 +24,7 @@ class Solution:
             prev = head.prev
             prev.next = head.next
             head.next.prev = prev
-            head.next = head.prev = None
+        
         
         return curr
         
