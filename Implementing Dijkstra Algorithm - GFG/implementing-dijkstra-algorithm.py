@@ -7,34 +7,62 @@ class Solution:
     def dijkstra(self, V, adj, S):
         #code here
         
-        adj_list = {}
+        # adj_list = {}
 
+        # for i in range(V):
+        #     adj_list[i] = adj[i]
+
+        # heap = [[0,S]]
+        
+        # distance = [float("inf")] * len(adj)
+        
+        # distance[S] = 0
+
+        # visited = [0] * len(adj)
+        
+
+
+        # while heap != []:
+            
+        #     curr = heap.pop(0)
+            
+        #     dis = curr[0]
+        #     node = curr[1]
+            
+        #     for i in adj_list[node]:
+        #         if dis + i[1] < distance[i[0]]:
+        #             distance[i[0]] = dis + i[1]
+        #             heap.append([distance[i[0]],i[0]])
+        #             hq.heapify(heap)
+        # return distance
+        
+        adj_list = {}
+        
         for i in range(V):
             adj_list[i] = adj[i]
-
-        heap = [[0,S]]
+            
+        distance = [float("inf") for i in range(V)]
         
-        distance = [float("inf")] * len(adj)
+        visited = [0 for i in range(V)]
         
         distance[S] = 0
-
-        visited = [0] * len(adj)
         
-
-
-        while heap != []:
+        heap = [[0,S]]
+        
+        while heap:
+            node = heap.pop(0)
             
-            curr = heap.pop(0)
+            dis = node[0]
+            curr = node[1]
             
-            dis = curr[0]
-            node = curr[1]
-            
-            for i in adj_list[node]:
+            for i in adj_list[curr]:
                 if dis + i[1] < distance[i[0]]:
                     distance[i[0]] = dis + i[1]
-                    heap.append([distance[i[0]],i[0]])
+                    heap.append([distance[i[0]], i[0]])
                     hq.heapify(heap)
+        
         return distance
+                    
             
 #{ 
  # Driver Code Starts
