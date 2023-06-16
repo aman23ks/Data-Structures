@@ -13,7 +13,6 @@ class Solution:
     #from left to right in Binary Tree.
     def topView(self,root):
         
-        # code he
         queue = [[root, 0]]
         
         ans = dict()
